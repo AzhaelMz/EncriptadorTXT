@@ -204,6 +204,7 @@ textarea{
     .bttns{
         width: 100%;  
         justify-content: center;
+        margin-left: 1.56rem;
         
     }
     .notice{
