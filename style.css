@@ -1,0 +1,268 @@
+body{ /* 16px es igual a 1rem*/
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:"slnt" 0;
+    background-color: #F3F5FC;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.header{
+    flex-basis: 14%;
+    padding-top: 4rem;
+    padding-left: 3rem;
+    display: block;
+
+}
+
+h1{
+    display: flex;
+    flex-basis: 12%;
+}
+
+.flex-basis{
+    flex-basis: 86%;
+    display: flex;
+    flex-direction: row;
+}
+
+.warning{
+    margin-right: 0.5rem;
+}
+
+.instructions{
+    margin-top: 10rem;
+    flex-basis: 60%;
+    margin-bottom: 2rem;
+}
+
+textarea{
+    display: block;
+    flex-basis: 60%;
+    width: 36rem;
+    height: 4.8rem; 
+    font-family: "Inter", sans-serif;
+    font-size: 2rem;
+    line-height: 4.8rem;
+    color:darkblue;
+    background-color: #F3F5FC;
+    border: 0;
+    outline:0;
+    resize:none;
+    overflow-y: hidden;
+    margin:1.2rem 0 0 0.2rem;
+    
+}
+
+#encryptor::placeholder {
+    color:#0A3871; 
+    ; /* Color del texto del placeholder */
+    transition: color 0.3s ease; /* Transición suave del color */
+  }
+  
+  /* Cambio de color al pasar el mouse sobre el textarea */
+  #encryptor:hover::placeholder {
+    color: #4689da; /* Nuevo color del texto del placeholder */
+  }
+
+.notice{
+    color:#495057;
+    display: flex;
+    flex-basis: 60%;
+    margin-top: 35rem;
+    margin-bottom: 24px;
+    text-align:justify;
+    font-size: 0.83rem;
+}
+
+.bttns{
+    display: flex;
+    flex-direction: row;
+}
+
+.bttn1{
+    width: 20.5rem;
+    background-color: #0A3871; 
+    color:#F3F5FC;
+    height: 4rem;
+    border-radius: 24px;
+    margin-right: 5%;
+    border-color:#0A3871;
+    border: none;
+    cursor: pointer;  
+    padding: 1.5rem;
+}
+
+
+.bttn2{
+    width: 20.5rem;
+    background-color: #F3F5FC; 
+    color:#0A3871;
+    height: 4rem;
+    border-radius: 24px;  
+    border: thin solid #0A3871;
+    cursor: pointer;
+    padding: 1.5rem;
+}
+
+.bttn1:hover{
+    background-color:#F3F5FC;
+    color:#0A3871;
+    border: thin solid #0A3871;
+    transition: all 0.4s ease;
+     
+}
+
+.bttn2:hover{
+    background-color:#0A3871;
+    color:#F3F5FC;
+    border: thin solid #0A3871;
+    transition: all 0.4s ease;
+}
+
+.muñeco-advise{
+    flex-basis: 40%;
+    width: 25rem;
+    display: flex;
+    border-radius: 32px;
+    margin: 2rem 0 2rem 6rem;
+    ;
+}   
+
+.main-messages{
+    flex-basis: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    min-height: 100%;
+    background-color: white;
+    border-radius: 3.2rem;
+    box-shadow: 2px 16px 10px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 0 2rem 0 2rem;
+}
+.muñeco{
+    width: 21rem;
+    padding-top: 3rem;
+    margin-bottom: 1rem;
+}
+
+.main-messages h2{
+    display: block;
+    color:rgba(52, 58, 64, 1);
+    font-weight: bold;
+    font-size: 1.80rem;
+    line-height: 2.88rem;
+}
+
+.main-messages p{ 
+    color:#495057;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 24%;
+    
+}
+
+@media (min-width: 360px) and (max-width: 1024px){
+
+
+    .flex-basis {
+        width: 100%;
+        margin-left: -10rem;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    
+     .instructions .textarea{
+        text-align: center;
+        width: 95%;
+        flex-direction: column;
+    }
+
+
+    .muñeco-advise{
+        flex-direction: column;
+        width: 100%;
+        padding: 1.56rem;
+        margin: 0;
+    }
+
+    .main-messages{
+        flex-direction: column;
+        width: 100%;
+        border: 1rem;
+        padding:1rem;
+    }
+
+    .bttns{
+        width: 100%;  
+        justify-content: center;
+        padding: 1rem
+    }
+    .notice{
+        margin-left: 1rem;
+    }
+    .bttn1, .bttn2{
+        width: 100%;
+    }
+    .muñeco{
+        display:none;
+    }
+}
+
+@media (max-width: 600px){
+    .flex-basis {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    }
+
+
+    .instructions .textarea .notice{
+    text-align: center;
+    width: 100%;
+    flex-direction: column;
+    
+    }
+
+
+   .muñeco-advise{
+        flex-direction: column;
+        width: 100%;
+        padding:1rem;
+        margin: 0;
+    }
+
+    .main-messages{
+        flex-direction: column;
+        width: 100%;
+        border: 1rem;
+        padding:0 0 1rem;
+    }
+
+    .bttns{
+        width: 100%;  
+        justify-content: center;
+        flex-direction: column;
+        margin-left: 1rem;
+
+    }
+    .notice{
+        margin-left: 1rem;
+    }
+    .bttn1, .bttn2{
+        width: 100%;
+    }
+    
+    .muñeco{
+        display:none;
+    }
+}
