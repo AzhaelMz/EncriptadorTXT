@@ -18,21 +18,21 @@
     </header>
     <main class="flex-basis" >
         <section class="instructions">
-            <textarea name="encryptor" id="encryptor" placeholder="Enter your text here" class="textarea"></textarea>
+            <textarea name="encryptor" id="user-input" placeholder="Enter your text here" class="textarea"></textarea>
             <p class="notice">
                 <img src="images/bi_exclamation-circle-fill.png" class="warning" alt="warning">
                 <small>Sólo minúsculas & palabras sin acento</small>
             </p>
             <div class="bttns">
-                <button onclick="encriptar();" class="bttn1" id="encriptar">Encrypt</button>
-                <button onclick="desencriptar();" class="bttn2" id="desencriptar">Decrypt</button>
+                <button onclick="btnencriptar();" class="bttn1" id="encriptador">Encrypt</button>
+                <button onclick="btndesencriptar();" class="bttn2" id="desencriptador">Decrypt</button>
             </div>
         </section>
         <section class="muñeco-advise">            
-             <article class="main-messages" id="criptedDecripted">
+            <article class="main-messages" id="texto-final">
                 <img src="images/Muñeco.png" class="muñeco" alt="muñeco">
                 <h2>No se han encontrado mensajes</h2>
-                 <p>Ingresa el texto que quieres desencriptar.</p>
+                <p>Ingresa el texto que quieres desencriptar.</p>           
             </article>
         </section>  
     

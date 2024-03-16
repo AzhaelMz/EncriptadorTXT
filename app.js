@@ -1,22 +1,28 @@
+const userInput = document.querySelector("#user-input");
+const TextoFinal = document.querySelector("#texto-final");
 
-const matriz =
 
-function textoFinal(elemento, texto){
-    let elementoHTML = document.querySelector(elemento);
-    elementoHTML.innerHTML = texto;
+const matriz_encriptador = [
+    ["e", "enter"],
+    ["i", "imes"],
+    ["a", "ai"],
+    ["o","ober"],
+    ["u","ufat"],
+]
+
+function btnencriptar(){
+    const texto = encriptar(userInput.value);
+    TextoFinal.textContent = texto;
 }
 
-function encriptar(){
-    let UserText = document.getElementById('encryptor').value;
-    if (UserText === UserText){
-        textoFinal ('h2', UserText); 
+function encriptar(textoEncriptado){
+    for (let i = 0; i < matriz_encriptador.length; i++){
+        if (textoEncriptado.includes(matriz_encriptador[i][0])){
+            textoEncriptado = textoEncriptado.replaceAll(
+                matriz_encriptador[i][0],
+                matriz_encriptador[i][1]
+            )
+        }
     }
-    console.log(UserText);
-    return;
-    
+    return textoEncriptado;
 }
-
-function desencriptar(){
-    alert('click a desencriptar');
-}
-
