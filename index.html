@@ -24,12 +24,12 @@
                 <small>Sólo minúsculas & palabras sin acento</small>
             </p>
             <div class="bttns">
-                <button class="bttn1">Encrypt</button>
-                <button class="bttn2">Decrypt</button>
+                <button onclick="encriptar();" class="bttn1" id="encriptar">Encrypt</button>
+                <button onclick="desencriptar();" class="bttn2" id="desencriptar">Decrypt</button>
             </div>
         </section>
         <section class="muñeco-advise">            
-             <article class="main-messages">
+             <article class="main-messages" id="criptedDecripted">
                 <img src="images/Muñeco.png" class="muñeco" alt="muñeco">
                 <h2>No se han encontrado mensajes</h2>
                  <p>Ingresa el texto que quieres desencriptar.</p>
