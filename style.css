@@ -95,7 +95,6 @@ textarea{
     padding: 1.5rem;
 }
 
-
 .bttn2{
     width: 20.5rem;
     background-color: #F3F5FC; 
@@ -105,6 +104,25 @@ textarea{
     border: thin solid #0A3871;
     cursor: pointer;
     padding: 1.5rem;
+}
+
+.bttn-copiar{
+    width: 20.5rem;
+    background-color: #F3F5FC; 
+    color:#0A3871;
+    height: 4rem;
+    border-radius: 24px;  
+    border: thin solid #0A3871;
+    cursor: pointer;
+    padding: 1.5rem;
+}
+
+.bttn-copiar:hover{
+    background-color:#0A3871;
+    color:#F3F5FC;
+    border: thin solid #0A3871;
+    transition: all 0.4s ease;
+    
 }
 
 .bttn1:hover{
