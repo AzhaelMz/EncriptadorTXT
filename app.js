@@ -26,3 +26,20 @@ function encriptar(textoEncriptado){
     }
     return textoEncriptado;
 }
+
+function btndesencriptar(textoEncriptado){
+    const texto= desencriptar(userInput.value);
+    TextoFinal.textContent = texto;
+}
+
+function desencriptar(textoEncriptado){
+    for (let i = 0; i < matriz_encriptador.length; i++){
+        if (textoEncriptado.includes(matriz_encriptador[i][1])){
+            textoEncriptado = textoEncriptado.replaceAll(
+                matriz_encriptador[i][1],
+                matriz_encriptador[i][0]
+            )
+        }
+    }
+    return textoEncriptado;
+}
