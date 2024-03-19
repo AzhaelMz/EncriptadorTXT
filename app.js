@@ -1,6 +1,6 @@
 const userInput = document.querySelector("#user-input");
 const TextoFinal = document.querySelector("#texto-final");
-
+const btnCopiar = document.querySelector("#btn-copiar");
 
 const matriz_encriptador = [
     ["e", "enter"],
@@ -13,6 +13,7 @@ const matriz_encriptador = [
 function btnencriptar(){
     const texto = encriptar(userInput.value);
     TextoFinal.textContent = texto;
+    mostrarCopiar(texto);
 }
 
 function encriptar(textoEncriptado){
@@ -30,6 +31,7 @@ function encriptar(textoEncriptado){
 function btndesencriptar(textoEncriptado){
     const texto= desencriptar(userInput.value);
     TextoFinal.textContent = texto;
+    mostrarCopiar(texto);
 }
 
 function desencriptar(textoEncriptado){
@@ -42,4 +44,24 @@ function desencriptar(textoEncriptado){
         }
     }
     return textoEncriptado;
+}
+
+function mostrarCopiar(){
+    if (texto.trim() !== ""){
+        btnCopiar.style.display = "inline-block";   
+    } else{
+        btnCopiar.style.display = "none";
+    }
+    return mostrarCopiar;
+}
+
+function copiarTexto(){
+    const textoACopiar = TextoFinal.textContent;
+    navigator.clipboard.writeText(textoACopiar)
+    .then(() =>{
+        alert("Texto copiado al portapapeles");
+    })
+    .catch(()=>{
+        console.error('Error al copiar texto:');
+    });
 }
