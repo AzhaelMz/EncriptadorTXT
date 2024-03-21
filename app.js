@@ -29,7 +29,7 @@ function encriptar(textoEncriptado){
 }
 
 function btndesencriptar(textoEncriptado){
-    const texto= desencriptar(userInput.value);
+    const texto= desencriptar(TextoFinal.textContent);
     TextoFinal.textContent = texto;
     mostrarCopiar(texto);
 }
@@ -47,12 +47,12 @@ function desencriptar(textoEncriptado){
 }
 
 function mostrarCopiar(){
-    if (texto.trim() !== ""){
+    const texto = TextoFinal.textContent.trim();
+    if (texto !== ""){
         btnCopiar.style.display = "inline-block";   
     } else{
         btnCopiar.style.display = "none";
     }
-    return mostrarCopiar;
 }
 
 function copiarTexto(){
